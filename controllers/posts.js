@@ -5,11 +5,17 @@ const postSeed = require("../models/seed");
 
 postRouter.get("/", (req, res) => {
   Post.find({}, (error, allPosts) => {
-    res.render("index.ejs", {
+    res.render("signup.ejs", {
       post: allPosts,
     });
     
   });
+});
+postRouter.get("/signin", (req, res) => {
+  res.render("signin.ejs");
+});
+postRouter.get("/signup", (req, res) => {
+  res.render("signup.ejs");
 });
 
 // seed data
