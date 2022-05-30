@@ -17,9 +17,16 @@ postRouter.get("/signin", (req, res) => {
 postRouter.get("/signup", (req, res) => {
   res.render("signup.ejs");
 });
+postRouter.get("/home", (req, res) => {
+  Post.find({}, (error, allPosts) => {
+    res.render("home.ejs", {
+      posts: allPosts,
+    });
+  });
+});
 
 // seed data
-postRouter.get("/seed", (req, res) => {
+postRouter.get("/home/seed", (req, res) => {
   Post.deleteMany({}, (error, allPosts) => {});
 
   Post.create(postSeed, (error, data) => {

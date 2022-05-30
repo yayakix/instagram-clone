@@ -1,8 +1,33 @@
 <%- include('header') -%>
 
-<h1>instagram</h1>
-<input type="search" name="" id="">
-icons icons icons icons icons profile image
-home page
+<nav class="homenavbar">
+   <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"  id="home-title" alt="">
+<input type="search" placeholder="Search" results="0" />
+<div class="rightside">
+<i class="fa-solid fa-house"></i>
+<i class="fa-regular fa-paper-plane"></i>
+<i class="fa-regular fa-square-plus"></i>
+
+
+<i class="fa-regular fa-compass"></i>
+<i class="fa-regular fa-heart"></i>
+
+<i class="fa-regular fa-paper-plane-top"></i>
+
+</div>
+
+</nav>
+<div class="home-posts"></div>
+<h1>herro</h1>
+
+<% posts.forEach(post => { %> 
+    <p class="caption">
+<%=post.caption%> 
+
+
+    </p>
+    <h2>peepoopee</h2>
+<%})%>
+
 
 <%- include('footer') -%>

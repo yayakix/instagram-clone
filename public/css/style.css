@@ -44,7 +44,7 @@
   background-color: #9ad0ec;
 
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-radius: 3px;
 }
 
@@ -86,7 +86,46 @@
     margin-bottom: 20px;
 }
 #forgotpassword{
-color: #4B7BE5;
+color: #243A73;
 background-color: white;
 font-size: 15px;
+}
+a{
+    text-decoration: none;
+}
+#signuplink{
+    color: deepskyblue;
+    text-decoration: none;
+     background-color: white;
+}
+#signuplink a:visited{
+    color: deepskyblue;
+     text-decoration: none;
+          background-color: white;
+
+}
+.homenavbar{
+    display: flex;
+position: fixed;
+  top: 0;
+  width: 100%;
+  border: 1px solid #b2b1b9;
+  /* overflow: hidden; */
+  /* background-color: #333; */
+}
+.rightside{
+    float: right;
+    padding-top: 30px;
+}
+
+.caption{
+    color: black;
+}
+#home-title{
+    margin-top: 15px;
+    width: 110px;
+    margin-left: 12px;
+}
+.home-posts{
+    margin-top: 60px;
 }
