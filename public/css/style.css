@@ -208,3 +208,14 @@ position: fixed;
 a:visited{
     color: black;
 }
+
+.like-btn{
+    outline:none;
+    background: transparent;
+    border: 0px;
+    padding: 0;
+    outline: 0;
+}
+.fa-heart:hover{
+    cursor: pointer;
+}

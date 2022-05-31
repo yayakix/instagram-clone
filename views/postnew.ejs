@@ -2,11 +2,12 @@
 
 
 		<h1>Create new post</h1>
-		<form action="/post" method="POST">
-            <input type="file" name="img" id="">
-			<input type="text" name="caption" /><br />
-			descrption: <input type="text" name="descrption" /><br />
-			
+		<form action="/posts/" method="POST">
+            <!-- <input type="file" name="img" id=""> -->
+            <input type="text" name="user" placeholder="username">
+            <input type="text" name="userimage" placeholder="userimage" id="">
+            <input type="text" name="img" placeholder="img url" />
+			<input type="text" name="caption" placeholder="add a caption"/><br />
 			<input type="submit" value="Share" />
 		</form>
 <%- include('footer') -%>

@@ -5,7 +5,7 @@ const postSchema = new mongoose.Schema({
   user: { type: String, required: true },
   caption: String,
   img: String,
-  likes: Number,
+  likes: {type: Number, default: 0},
   comments: Array,
 });
 

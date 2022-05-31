@@ -26,16 +26,29 @@
 
 
 
-<% posts.forEach(post => { %> 
+<% for (let i = posts.length - 1; i >= 0; i--) { %> 
 <div class="home-posts">
 
-    <img src="<%=post.userimage%>" id="userimage-home" alt=""><span class="user-home" id="username-home"> <%=post.user%></span>
+    <img src="<%=posts[i].userimage%>" id="userimage-home" alt=""><span class="user-home" id="username-home"> <%=posts[i].user%></span>
     <i class="fa-solid fa-ellipsis"></i>
     <br>
-    <img src="<%=post.img%> " alt="" class="home-images">
+    <img src="<%=posts[i].img%> " alt="" class="home-images">
     <br>
     <nav class="imagenav-home">
-        <i class="fa-regular fa-heart"></i>
+
+        <form action="/posts/<%=posts[i]._id%>/like" method="POST" >
+           
+
+       <button type="submit" class="like-btn">
+  <i class="fa-regular fa-heart" ></i>
+</button>
+
+  
+
+</form>    
+
+
+
   <i class="fa-regular fa-comment"></i>
   <i class="fa-regular fa-paper-plane"></i>
   <span id="bookmark-home">
@@ -46,11 +59,11 @@
   
 <br>
 <div class="leftcontent-home">
-<h4 class="white-bg"><%=post.likes%> likes</h4>
+<h4 class="white-bg"><%=posts[i].likes%> likes</h4>
     
     <p class="caption white-bg">
-        <span class="user-home"><%=post.user%> </span>
-<%=post.caption%> 
+        <span class="user-home"><%=posts[i].user%> </span>
+<%=posts[i].caption%> 
 
     </p>
 </div>
@@ -59,7 +72,7 @@
     
 </div>
     </div>
-<%})%>
+<%}%>
 
 
 
