@@ -158,8 +158,8 @@ position: fixed;
 }
 .imagenav-home{
     background-color: white;
-    text-align: left;
-    
+text-align: left;  
+
 }
 
 #bookmark-home{
@@ -210,12 +210,38 @@ a:visited{
 }
 
 .like-btn{
-    outline:none;
-    background: transparent;
+    /* outline:none; */
+    /* background: transparent; */
     border: 0px;
-    padding: 0;
-    outline: 0;
+    /* padding: 0; */
+    /* outline: 0; */
+    float: left;
+    font-size: 17px;
+    background-color: white;
 }
 .fa-heart:hover{
     cursor: pointer;
 }
+
+details > summary {
+  list-style: none;
+    background-color: white;
+
+  
+}
+details {
+  background-color: white;
+}
+
+details > p {
+  background-color: white;
+  margin-left: 500px;
+}
+#delete-btn{
+    border: 0px;
+    margin-left: 490px;
+}
+#sure-home{
+    margin-left: 490px;
+}
+

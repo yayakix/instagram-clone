@@ -46,14 +46,28 @@ postRouter.post("/", (req, res) => {
   });
 });
 // handle like count
+let liked = false;
 postRouter.post("/:id/like", (req, res) => {
   Post.findById(req.params.id, (err, data) => {
-    
-      data.likes++;
+    if(liked === true){
+ data.likes--
+ liked = false
+    }else{
+        data.likes++;
+         liked = true;
+    }
+      
       data.save();
     
 
     res.redirect(`/posts/home`);
+  });
+});
+
+postRouter.delete("/:id", (req, res) => {
+  Post.findByIdAndDelete(req.params.id, (error, deletedPosts) => {
+    // res.send({ success: true });
+    res.redirect("/posts/home");
   });
 });
 
