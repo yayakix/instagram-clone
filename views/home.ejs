@@ -6,7 +6,10 @@
 <div class="rightside">
 <i class="fa-solid fa-house space" ></i>
 <i class="fa-regular fa-paper-plane space"></i>
+<a href="/posts/newpost">
 <i class="fa-regular fa-square-plus space"></i>
+</a>
+
 <i class="fa-regular fa-compass space"></i>
 <i class="fa-regular fa-heart"></i>
 
@@ -26,10 +29,10 @@
 <% posts.forEach(post => { %> 
 <div class="home-posts">
 
-    <span id="username-home"><img src="<%=post.userimage%>" id="userimage-home" alt=""> <%=post.user%> </span>
+    <img src="<%=post.userimage%>" id="userimage-home" alt=""><span class="user-home" id="username-home"> <%=post.user%></span>
     <i class="fa-solid fa-ellipsis"></i>
     <br>
-    <img src="<%=post.img%> " alt="">
+    <img src="<%=post.img%> " alt="" class="home-images">
     <br>
     <nav class="imagenav-home">
         <i class="fa-regular fa-heart"></i>
@@ -43,9 +46,10 @@
   
 <br>
 <div class="leftcontent-home">
-<h4><%=post.likes%> likes</h4>
-    <span><%=post.user%> </span>
-    <p class="caption">
+<h4 class="white-bg"><%=post.likes%> likes</h4>
+    
+    <p class="caption white-bg">
+        <span class="user-home"><%=post.user%> </span>
 <%=post.caption%> 
 
     </p>

@@ -35,5 +35,10 @@ postRouter.get("/home/seed", (req, res) => {
 });
 // create
 
+postRouter.get("/newpost", (req, res) => {
+  res.render("postnew.ejs");
+});
+
+
 
 module.exports = postRouter;

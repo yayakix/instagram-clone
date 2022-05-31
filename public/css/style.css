@@ -115,6 +115,7 @@ position: fixed;
   width: 100%;
   border: 2px solid #ECECEC;
   height: 60px;
+  z-index: 1;
   /* overflow: hidden; */
   /* background-color: #333; */
 }
@@ -143,6 +144,7 @@ position: fixed;
     text-align: center;
     border: 1px solid #ECECEC;
     background-color: white;
+    padding: 5px;
 }
 #searchbar-home{
     background-color: #ECECEC;
@@ -153,28 +155,56 @@ position: fixed;
     margin-top: 10px;
     padding-left: 20px;
     
-    
 }
 .imagenav-home{
-    float: left;
+    background-color: white;
+    text-align: left;
     
 }
 
 #bookmark-home{
-    margin-left: 420px;
+    background-color: white;
+    float: right;
+    /* margin-left: 420px; */
 }
 #username-home{
+    background-color: white;
     float: left;
+    /* background-color: #9ad0ec; */
+    margin-top: 15px;
+    
+ 
 }
 .leftcontent-home{
+    background-color: white;
     text-align: left;
 }
 .fa-ellipsis{
+    background-color: white;
     float: right;
 }
 #userimage-home{
-    border-radius: 50%;
-    max-width: 50px;
-    max-height: 50px;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
     clip-path: circle();
+        float: left;
+        
+}
+.white-bg{
+    background-color: white;
+
+}
+.home-images{
+    max-width: 490px;
+    background-color: white;
+
+}
+.user-home{
+    font-weight: 900;
+}
+
+a:visited{
+    color: black;
 }
