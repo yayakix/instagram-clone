@@ -2,13 +2,11 @@
 
 <nav class="homenavbar">
    <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"  id="home-title" alt="">
-<input type="search" placeholder="Search" results="0" />
+<input type="search" placeholder="Search" results="0" id="searchbar-home" />
 <div class="rightside">
 <i class="fa-solid fa-house"></i>
 <i class="fa-regular fa-paper-plane"></i>
 <i class="fa-regular fa-square-plus"></i>
-
-
 <i class="fa-regular fa-compass"></i>
 <i class="fa-regular fa-heart"></i>
 
@@ -17,17 +15,47 @@
 </div>
 
 </nav>
-<div class="home-posts"></div>
-<h1>herro</h1>
+
+<div class="stories-home">
+    <h3>stories here</h3>
+
+</div>
+
+
+
 
 <% posts.forEach(post => { %> 
+<div class="home-posts">
+
+    <span id="username-home"><%=post.user%> </span>
+    <i class="fa-solid fa-ellipsis"></i>
+    <br>
+    <img src="<%=post.img%> " alt="">
+    <br>
+    <nav class="imagenav-home">
+        <i class="fa-regular fa-heart"></i>
+  <i class="fa-regular fa-comment"></i>
+  <i class="fa-regular fa-paper-plane"></i>
+  <span id="bookmark-home">
+      <i class="fa-regular fa-bookmark"></i>
+  </span>
+
+    </nav>
+  
+<br>
+<div class="leftcontent-home">
+<h4><%=post.likes%> likes</h4>
+    <span><%=post.user%> </span>
     <p class="caption">
 <%=post.caption%> 
 
 
     </p>
-    <h2>peepoopee</h2>
+</div>
+    
 <%})%>
+</div>
+
 
 
 <%- include('footer') -%>
