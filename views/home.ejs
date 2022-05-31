@@ -4,13 +4,12 @@
    <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"  id="home-title" alt="">
 <input type="search" placeholder="Search" results="0" id="searchbar-home" />
 <div class="rightside">
-<i class="fa-solid fa-house"></i>
-<i class="fa-regular fa-paper-plane"></i>
-<i class="fa-regular fa-square-plus"></i>
-<i class="fa-regular fa-compass"></i>
+<i class="fa-solid fa-house space" ></i>
+<i class="fa-regular fa-paper-plane space"></i>
+<i class="fa-regular fa-square-plus space"></i>
+<i class="fa-regular fa-compass space"></i>
 <i class="fa-regular fa-heart"></i>
 
-<i class="fa-regular fa-paper-plane-top"></i>
 
 </div>
 
@@ -27,7 +26,7 @@
 <% posts.forEach(post => { %> 
 <div class="home-posts">
 
-    <span id="username-home"><%=post.user%> </span>
+    <span id="username-home"><img src="<%=post.userimage%>" id="userimage-home" alt=""> <%=post.user%> </span>
     <i class="fa-solid fa-ellipsis"></i>
     <br>
     <img src="<%=post.img%> " alt="">
@@ -49,12 +48,15 @@
     <p class="caption">
 <%=post.caption%> 
 
-
     </p>
 </div>
+<div>
     
-<%})%>
+    
 </div>
+    </div>
+<%})%>
+
 
 
 
