@@ -1,0 +1,30 @@
+<%- include('../header') -%>
+
+
+<div class="signin-box register">
+        <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"  id="login-title" alt="">
+    <br>
+    <form action='/users' method='POST' id="login-form">
+        <input type="text" name="email" class="userbox" placeholder="Mobile Number or Email">
+    <input type="text"  name="fullname"  class="userbox" placeholder="Full Name">
+
+    <input type="text" name="username" class="userbox" placeholder="Username">
+    <br>
+    <input type="password" name="password" class="userbox" placeholder="Password">
+    <br>
+    <a href="/posts/home">
+    <button type="submit" id="login-btn">Sign up</button>
+    </form>
+    </a>
+   
+    <p id="middleOR">OR</p>
+
+    <h3 id="loginwithfacebook">    <i class="fa-brands fa-facebook-square"></i> Log in with Facebook</h3>
+</div>
+
+<div>
+    <h3 id="second-box">Have an account? <span id="signuplink"><a href="/sessions/new">Log in</a></span></h3>
+</div>
+
+
+<%- include('../footer') -%>

@@ -247,3 +247,10 @@ details > p {
 #captionchange{
   width: 400px;
 }
+
+#login-form{
+  background-color: white;
+}
+.register{
+  height: 500px;
+}
