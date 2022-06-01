@@ -39,6 +39,15 @@ postRouter.get("/newpost", (req, res) => {
   res.render("postnew.ejs");
 });
 
+postRouter.get("/:id/edit", (req, res) => {
+  Post.findById(req.params.id, (error, foundPost) => {
+    res.render("edit.ejs", {
+      post: foundPost,
+    });
+  });
+});
+
+
 postRouter.post("/", (req, res) => {
   // order products
   Post.create(req.body, (error, createdPost) => {
@@ -69,6 +78,18 @@ postRouter.delete("/:id", (req, res) => {
     // res.send({ success: true });
     res.redirect("/posts/home");
   });
+});
+
+
+postRouter.put("/:id", (req, res) => {
+  Post.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (error, updatePost) => {
+      res.redirect("/posts/home");
+    }
+  );
 });
 
 module.exports = postRouter;

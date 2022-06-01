@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/e7fbf5096b.js"
-      crossorigin="anonymous"
-    ></script>
+<%- include('header') -%>
 
-    <link rel="stylesheet" href="/css/style.css" />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <nav class="homenavbar">
+ <nav class="homenavbar">
       <img
         src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
         id="home-title"
@@ -27,8 +14,7 @@
         id="searchbar-home"
       />
       <div class="rightside">
-        <a href="/posts/home"> <i class="fa-solid fa-house space"></i></a>
-       
+         <a href="/posts/home"> <i class="fa-solid fa-house space"></i></a>
         <i class="fa-regular fa-paper-plane space"></i>
         <a href="/posts/newpost">
           <i class="fa-regular fa-square-plus space"></i>
@@ -43,23 +29,28 @@
       <h3>stories here</h3>
     </div>
 
-    <% for (let i = posts.length - 1; i >= 0; i--) { %>
+  
     <div class="home-posts">
-      <img src="<%=posts[i].userimage%>" id="userimage-home" alt="" /><span
+      <img src="<%=post.userimage%>" id="userimage-home" alt="" /><span
         class="user-home"
         id="username-home"
       >
-        <%=posts[i].user%></span
+        <%=post.user%></span
       >
 
       <details>
         <summary><i class="fa-solid fa-ellipsis"></i></summary>
-        <p><a href="/posts/<%=posts[i]._id%>/edit">Edit</a></p>
+        <p>Edit</p>
+
+
+
+
+
         <details>
           <summary id="sure-home">Delete</summary>
           <p>no</p>
           <form
-            action="/posts/<%=posts[i]._id; %>?_method=DELETE"
+            action="/posts/<%=post._id; %>?_method=DELETE"
             method="POST"
           >
             <input type="submit" value="Yes" id="delete-btn" />
@@ -67,10 +58,10 @@
         </details>
       </details>
       <br />
-      <img src="<%=posts[i].img%> " alt="" class="home-images" />
+      <img src="<%=post.img%> " alt="" class="home-images" />
       <br />
       <nav class="imagenav-home">
-        <form action="/posts/<%=posts[i]._id%>/like" method="POST">
+        <form action="/posts/<%=post._id%>/like" method="POST">
           <button type="submit" class="like-btn">
             <i
               class="fa-regular fa-heart liked-h"
@@ -88,17 +79,22 @@
 
       <br />
       <div class="leftcontent-home">
-        <h4 class="white-bg"><%=posts[i].likes%> likes</h4>
+        <h4 class="white-bg"><%=post.likes%> likes</h4>
 
         <p class="caption white-bg">
-          <span class="user-home"><%=posts[i].user%> </span>
-          <%=posts[i].caption%>
+          <span class="user-home"><%=post.user%> </span>
+<form action="/posts/<%=post._id%>?_method=PUT" method="POST">
+
+    <input type="text" name="caption" placeholder="id" id="captionchange" value="<%=post.caption%>">
+
+    <input type="submit" value="update">
+
+
+</form>
         </p>
       </div>
-      <div></div>
+    
     </div>
 
-    
-    <%}%> <%- include('footer') -%>
-  </body>
-</html>
+<%- include('footer') -%>
+
