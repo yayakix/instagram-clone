@@ -46,12 +46,12 @@
 		</form>
     </nav>
 
-    <div class="stories-home">
-      <h3>stories here</h3>
-    </div>
+   
 
     <% for (let i = posts.length - 1; i >= 0; i--) { %>
     <div class="home-posts">
+        <%=user.username%>
+
       <img src="<%=posts[i].userimage%>" id="userimage-home" alt="" /><span
         class="user-home"
         id="username-home"

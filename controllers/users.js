@@ -4,7 +4,7 @@ const express = require("express");
 const userRouter = express.Router();
 const User = require("../models/user.js");
 
-// New (registration page)
+
 
 // Create (registration route)
 userRouter.post("/", (req, res) => {
@@ -18,7 +18,6 @@ userRouter.post("/", (req, res) => {
     res.redirect("/");
   });
 });
-// Create (registration route)
 
 // New (registration page)
 userRouter.get("/new", (req, res) => {

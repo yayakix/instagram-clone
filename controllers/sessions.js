@@ -48,6 +48,7 @@ sessionsRouter.delete("/", (req, res) => {
 
 // New (login page)
 sessionsRouter.get("/new", (req, res) => {
+    
   res.render("sessions/signin.ejs", {
     currentUser: req.session.currentUser,
   });

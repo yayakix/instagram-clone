@@ -2,25 +2,38 @@ const express = require("express");
 const postRouter = express.Router();
 const Post = require("../models/post");
 const postSeed = require("../models/seed");
+const app = express();
+
+const session = require("express-session");
+// Middleware
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+
+const User = require("../models/user.js");
+
 
 postRouter.get("/", (req, res) => {
   Post.find({}, (error, allPosts) => {
     res.render("signup.ejs", {
       post: allPosts,
+
     });
-    
   });
 });
-postRouter.get("/signin", (req, res) => {
-  res.render("signin.ejs");
-});
-postRouter.get("/signup", (req, res) => {
-  res.render("signup.ejs");
-});
+
+
 postRouter.get("/home", (req, res) => {
+console.log(req.session.currentUser)
   Post.find({}, (error, allPosts) => {
     res.render("home.ejs", {
       posts: allPosts,
+      user: req.session.currentUser
     });
   });
 });
