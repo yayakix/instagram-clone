@@ -15,6 +15,7 @@
   </head>
   <body>
     <nav class="homenavbar">
+    
       <img
         src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
         id="home-title"
@@ -36,7 +37,13 @@
 
         <i class="fa-regular fa-compass space"></i>
         <i class="fa-regular fa-heart"></i>
+        <a href=""><i class="fa-solid fa-user"></i></a>
+        
+
       </div>
+      <form action="/sessions?_method=DELETE" method="POST" >
+			<input type="submit" value="Log Out" class="logout-btn" />
+		</form>
     </nav>
 
     <div class="stories-home">

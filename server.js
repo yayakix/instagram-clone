@@ -9,7 +9,6 @@ require("dotenv").config();
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 
-
 const session = require('express-session');
 // Middleware 
 app.use(
@@ -19,9 +18,6 @@ app.use(
         saveUninitialized: false
     })
 );
-
-
-
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
@@ -44,7 +40,6 @@ app.use("/sessions", sessionsController);
 const userController = require("./controllers/users");
 app.use("/users", userController);
 
-
 // user auth
 app.get("/", (req, res) => {
   if (req.session.currentUser) {
@@ -52,7 +47,7 @@ app.get("/", (req, res) => {
       currentUser: req.session.currentUser,
     });
   } else {
-    res.render("explore.ejs", {
+    res.render("./sessions/signin.ejs", {
       currentUser: req.session.currentUser,
     });
   }

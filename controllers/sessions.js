@@ -41,9 +41,10 @@ sessionsRouter.post("/", (req, res) => {
 
 sessionsRouter.delete("/", (req, res) => {
   req.session.destroy((error) => {
-    res.redirect("/");
+    res.redirect("/sessions/new");
   });
 });
+// might need to change redirect 
 
 // New (login page)
 sessionsRouter.get("/new", (req, res) => {

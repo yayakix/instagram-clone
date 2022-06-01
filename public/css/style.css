@@ -252,5 +252,19 @@ details > p {
   background-color: white;
 }
 .register{
-  height: 500px;
+  height: 530px;
+}
+.signuptoview{
+  background-color: white;
+  color: #b2b1b9;
+  width: 300px;
+}
+
+.logout-btn{
+  border: none;
+  position: absolute;
+  right: 0;
+}
+.fa-user{
+  margin-left: 20px;
 }
