@@ -37,8 +37,6 @@ sessionsRouter.post("/", (req, res) => {
   );
 });
 
-// Delete (logout route)
-
 sessionsRouter.delete("/", (req, res) => {
   req.session.destroy((error) => {
     res.redirect("/sessions/new");

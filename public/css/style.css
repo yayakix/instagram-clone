@@ -117,6 +117,7 @@ a {
   z-index: 1;
   /* overflow: hidden; */
   /* background-color: #333; */
+  
 }
 .rightside {
   float: right;
@@ -279,12 +280,13 @@ a {
 
 /* cards div */
 .cards {
-  display: flex;
+  display: inline-flexbox;
 
   flex-wrap: wrap;
-
-  margin-left: -8px;
-  margin-right: -8px;
+margin-left: 20px;
+  /* margin-left: -8px;
+  margin-right: -8px; */
+/* margin: 0 auto; */
 
   
 }
@@ -293,13 +295,14 @@ a {
   /* There will be 5 cards per row */
   flex-basis: 20%;
 
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  float: left;
   
 }
 #profileimages{
-width: 300px;
-height: 300px;
+width: 250px;
+height: 250px;
 }
 
 .profile-hr{
@@ -326,6 +329,7 @@ height: 300px;
   grid-area: i;
   margin-bottom: 20px;
   margin-left: 20px;
+  margin-top: 10px;
 }
 #username-greeting{
   /* margin-left: -100px; */
@@ -355,6 +359,7 @@ display: none;
   position: absolute;
   right: 14px;
 }
+
 
 @media only screen and (max-width: 1000px) {
 #searchbar-home{
