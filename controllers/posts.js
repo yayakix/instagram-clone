@@ -38,6 +38,17 @@ console.log(req.session.currentUser)
   });
 });
 
+postRouter.get("/profile", (req, res) => {
+  console.log(req.session.currentUser);
+
+  Post.find({}, (error, allPosts) => {
+    res.render("profile.ejs", {
+      posts: allPosts,
+      user: req.session.currentUser,
+    });
+  });
+});
+
 // seed data
 postRouter.get("/home/seed", (req, res) => {
   Post.deleteMany({}, (error, allPosts) => {});
@@ -49,7 +60,9 @@ postRouter.get("/home/seed", (req, res) => {
 // create
 
 postRouter.get("/newpost", (req, res) => {
-  res.render("postnew.ejs");
+  res.render("postnew.ejs", {
+    user: req.session.currentUser,
+  });
 });
 
 postRouter.get("/:id/edit", (req, res) => {
@@ -62,8 +75,10 @@ postRouter.get("/:id/edit", (req, res) => {
 
 
 postRouter.post("/", (req, res) => {
-  // order products
   Post.create(req.body, (error, createdPost) => {
+    console.log(createdPost)
+    req.session.currentUser.posts.push(createdPost)
+    console.log(req.session.currentUser.posts);
     res.redirect("/posts/home");
   });
 });

@@ -1,0 +1,29 @@
+<%- include('header') -%>
+
+<%- include('navbar') -%>
+
+<br>
+<br>
+<br>
+<br>
+
+<img src="" alt="image of profile">
+<h1> <%=user.username%> page</h1>
+<p><%=user.posts.length%> </p>
+<p><%=user.name%></p>
+
+<h2>posts</h2>
+<p>grid of images</p>
+<div class="cards">
+<% for (let i = 0; i < user.posts.length; i++){%>
+
+    <div class="cards__item">
+        <img src="<%=user.posts[i].img%>" alt="" id="profileimages">
+      
+    </div>
+
+    
+<%}%>
+</div>
+
+<%- include('footer') -%>

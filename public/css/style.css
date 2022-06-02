@@ -12,8 +12,8 @@
   margin-top: 70px;
   height: 420px;
 }
-#second-box{
-    border: 1px solid #dfdfde;
+#second-box {
+  border: 1px solid #dfdfde;
   width: 400px;
   text-align: center;
   background-color: white;
@@ -21,7 +21,7 @@
   height: 70px;
   padding-top: 30px;
   font-weight: 100;
-  font-size:medium
+  font-size: medium;
 }
 #login-title {
   margin-top: 50px;
@@ -56,7 +56,7 @@
   margin-bottom: 20px;
   overflow: hidden;
   text-align: center;
-  color: #7F8487;
+  color: #7f8487;
   background-color: white;
   width: 299px;
 }
@@ -81,154 +81,144 @@
   left: 0.5em;
   margin-right: -50%;
 }
-#loginwithfacebook{
-    margin-top: 30px;
-    background-color: white;
-    color: #243A73;
-    font-size: 16px;
-    margin-bottom: 20px;
+#loginwithfacebook {
+  margin-top: 30px;
+  background-color: white;
+  color: #243a73;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
-#forgotpassword{
-color: #243A73;
-background-color: white;
-font-size: 15px;
+#forgotpassword {
+  color: #243a73;
+  background-color: white;
+  font-size: 15px;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-#signuplink{
-    color: deepskyblue;
-    text-decoration: none;
-     background-color: white;
+#signuplink {
+  color: deepskyblue;
+  text-decoration: none;
+  background-color: white;
 }
-#signuplink a:visited{
-    color: deepskyblue;
-     text-decoration: none;
-          background-color: white;
-
+#signuplink a:visited {
+  color: deepskyblue;
+  text-decoration: none;
+  background-color: white;
 }
 /* signin styling */
-.homenavbar{
-    display: flex;
-position: fixed;
+.homenavbar {
+  display: flex;
+  position: fixed;
   top: 0;
   width: 100%;
-  border: 2px solid #ECECEC;
+  border: 2px solid #ececec;
   height: 60px;
   z-index: 1;
   /* overflow: hidden; */
   /* background-color: #333; */
 }
-.rightside{
-    float: right;
-    font-size: 25px;    
-    margin-top: 10px;
+.rightside {
+  float: right;
+  font-size: 25px;
+  margin-top: 10px;
 }
-.space{
-    padding-right: 30px;
-}
-
-.caption{
-    color: black;
-}
-#home-title{
-    margin-top: 15px;
-    width: 110px;
-    margin-left: 12px;
-    padding: 6px;
-    margin-bottom: 5px;
-}
-.home-posts{
-    max-width: 500px;
-    margin-top: 60px;
-    text-align: center;
-    border: 1px solid #ECECEC;
-    background-color: white;
-    padding: 5px;
-}
-#searchbar-home{
-    background-color: #ECECEC;
-    width: 270px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding-left: 20px;
-    
-}
-.imagenav-home{
-    background-color: white;
-text-align: left;  
-
+.space {
+  padding-right: 30px;
 }
 
-#bookmark-home{
-    background-color: white;
-    float: right;
-    /* margin-left: 420px; */
+.caption {
+  color: black;
 }
-#username-home{
-    background-color: white;
-    float: left;
-    /* background-color: #9ad0ec; */
-    margin-top: 15px;
-    
- 
+#home-title {
+  margin-top: 15px;
+  width: 110px;
+  margin-left: 12px;
+  padding: 6px;
+  margin-bottom: 5px;
 }
-.leftcontent-home{
-    background-color: white;
-    text-align: left;
+.home-posts {
+  max-width: 500px;
+  margin-top: 60px;
+  text-align: center;
+  border: 1px solid #ececec;
+  background-color: white;
+  padding: 5px;
 }
-.fa-ellipsis{
-    background-color: white;
-    float: right;
+#searchbar-home {
+  background-color: #ececec;
+  width: 270px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding-left: 20px;
 }
-#userimage-home{
-    background-color: white;
-    width: 35px;
-    height: 35px;
-    margin: 5px;
-    clip-path: circle();
-        float: left;
-        
-}
-.white-bg{
-    background-color: white;
-
-}
-.home-images{
-    max-width: 490px;
-    background-color: white;
-
-}
-.user-home{
-    font-weight: 900;
-    background-color: white;
+.imagenav-home {
+  background-color: white;
+  text-align: left;
 }
 
-a:visited{
-    color: black;
+#bookmark-home {
+  background-color: white;
+  float: right;
+  /* margin-left: 420px; */
+}
+#username-home {
+  background-color: white;
+  float: left;
+  /* background-color: #9ad0ec; */
+  margin-top: 15px;
+}
+.leftcontent-home {
+  background-color: white;
+  text-align: left;
+}
+.fa-ellipsis {
+  background-color: white;
+  float: right;
+}
+#userimage-home {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  clip-path: circle();
+  float: left;
+}
+.white-bg {
+  background-color: white;
+}
+.home-images {
+  max-width: 490px;
+  background-color: white;
+}
+.user-home {
+  font-weight: 900;
+  background-color: white;
 }
 
-.like-btn{
-    /* outline:none; */
-    /* background: transparent; */
-    border: 0px;
-    /* padding: 0; */
-    /* outline: 0; */
-    float: left;
-    font-size: 17px;
-    background-color: white;
+a:visited {
+  color: black;
 }
-.fa-heart:hover{
-    cursor: pointer;
+
+.like-btn {
+  /* outline:none; */
+  /* background: transparent; */
+  border: 0px;
+  /* padding: 0; */
+  /* outline: 0; */
+  float: left;
+  font-size: 17px;
+  background-color: white;
+}
+.fa-heart:hover {
+  cursor: pointer;
 }
 
 details > summary {
   list-style: none;
-    background-color: white;
-
-  
+  background-color: white;
 }
 details {
   background-color: white;
@@ -238,35 +228,35 @@ details > p {
   background-color: white;
   margin-left: 500px;
 }
-#delete-btn{
-    border: 0px;
-    margin-left: 490px;
+#delete-btn {
+  border: 0px;
+  margin-left: 490px;
 }
-#sure-home{
-    margin-left: 490px;
+#sure-home {
+  margin-left: 490px;
 }
-#captionchange{
+#captionchange {
   width: 400px;
 }
 
-#login-form{
+#login-form {
   background-color: white;
 }
-.register{
+.register {
   height: 530px;
 }
-.signuptoview{
+.signuptoview {
   background-color: white;
   color: #b2b1b9;
   width: 300px;
 }
 
-.logout-btn{
+.logout-btn {
   border: none;
   position: absolute;
   right: 0;
 }
-.fa-user{
+.fa-user {
   margin-left: 20px;
 }
 a {
@@ -274,7 +264,33 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-  #searchbar-home{
+  #searchbar-home {
     display: none;
   }
+}
+
+/* cards div */
+.cards {
+  display: flex;
+
+  /* Put a card in the next row when previous cards take all width */
+  flex-wrap: wrap;
+
+  margin-left: -8px;
+  margin-right: -8px;
+
+  
+}
+
+.cards__item {
+  /* There will be 4 cards per row */
+  flex-basis: 25%;
+
+  padding-left: 8px;
+  padding-right: 8px;
+  
+}
+#profileimages{
+width: 300px;
+max-height: 300px;
 }
