@@ -34,7 +34,7 @@ const User = require("../models/user.js");
 //   });
 // });
 // home page GET
-postRouter.get("/home", (req, res) => {
+postRouter.get("/home", isAuthenticated, (req, res) => {
   console.log(req.session.currentUser.posts);
   
   Post.find({}, (error, allPosts) => {
@@ -45,7 +45,7 @@ postRouter.get("/home", (req, res) => {
   });
 });
 // GET for profile page
-postRouter.get("/profile", (req, res) => {
+postRouter.get("/profile", isAuthenticated, (req, res) => {
   console.log(req.session.currentUser);
 
   Post.find({}, (error, allPosts) => {
@@ -67,14 +67,14 @@ postRouter.get("/home/seed", (req, res) => {
 });
 // create new post GET
 
-postRouter.get("/newpost", (req, res) => {
+postRouter.get("/newpost", isAuthenticated, (req, res) => {
   res.render("postnew.ejs", {
     user: req.session.currentUser,
   });
 });
 
 // GET ROUTE edit caption  
-postRouter.get("/:id/edit", (req, res) => {
+postRouter.get("/:id/edit", isAuthenticated, (req, res) => {
   Post.findById(req.params.id, (error, foundPost) => {
     // is it possible to add another schema request 
     res.render("edit.ejs", {
@@ -84,7 +84,7 @@ postRouter.get("/:id/edit", (req, res) => {
 });
 
 // POST ROUTE new post
-postRouter.post("/", (req, res) => {
+postRouter.post("/", isAuthenticated, (req, res) => {
   Post.create(req.body, (error, createdPost) => {
     console.log("created post: " + createdPost);
     req.session.currentUser.posts.push(createdPost);
@@ -95,7 +95,7 @@ postRouter.post("/", (req, res) => {
 });
 // handle like count
 let liked = false;
-postRouter.post("/:id/like", (req, res) => {
+postRouter.post("/:id/like", isAuthenticated, (req, res) => {
   Post.findById(req.params.id, (err, data) => {
     if (liked === true) {
       data.likes--;
@@ -119,7 +119,7 @@ postRouter.delete("/:id", (req, res) => {
 });
 
 // PUT ROUTE edit captions
-postRouter.put("/:id", (req, res) => {
+postRouter.put("/:id", isAuthenticated, (req, res) => {
   Post.findByIdAndUpdate(
     req.params.id,
     req.body,
@@ -131,7 +131,7 @@ postRouter.put("/:id", (req, res) => {
 });
 
 // edit profile data
-postRouter.get("/:id/editprofile", (req, res) => {
+postRouter.get("/:id/editprofile", isAuthenticated, (req, res) => {
     User.findById(req.params.id, (error, foundUser) => {
       // is it possible to add another schema request
       res.render("editprofile.ejs", {
@@ -142,7 +142,7 @@ postRouter.get("/:id/editprofile", (req, res) => {
 
 });
 // put route edit profile data
-postRouter.put("/editprofile/:id", (req, res) => {
+postRouter.put("/editprofile/:id", isAuthenticated, (req, res) => {
   User.findByIdAndUpdate(
     req.params.id,
     req.body,
@@ -154,7 +154,7 @@ postRouter.put("/editprofile/:id", (req, res) => {
 });
 
 // add route to see individual images on profile
-postRouter.get("/showpost/:id", (req, res) => {
+postRouter.get("/showpost/:id", isAuthenticated, (req, res) => {
   Post.findById(req.params.id, (error, foundPost) => {
     // is it possible to add another schema request 
     res.render("showpost.ejs", {
@@ -163,6 +163,11 @@ postRouter.get("/showpost/:id", (req, res) => {
     });
   });
 });
+
+function isAuthenticated(req, res, next) {
+  if (!req.session.currentUser) return res.redirect("/sessions/new/");
+  next();
+}
 
 
 module.exports = postRouter;
