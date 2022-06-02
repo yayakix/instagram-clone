@@ -3,6 +3,15 @@ const postRouter = express.Router();
 const Post = require("../models/post");
 const postSeed = require("../models/seed");
 const app = express();
+// ISSUES
+// POSTS PUSHED DO NOT SAVE WHEN SERVER REFRESHES
+// EDITING USER PROFILE IMAGE
+
+// IMAGES ONLY SHOWING FOR THOSE WHO ARE ACTUALLY LOGGED IN
+// PROFILE IMAGES NOT SAVING TO POST DATABASE
+// HOW TO SET PROFILE IMAGE EQUAL TO POST IMAGE 
+
+// how to save not just to session but to mongoose
 
 const session = require("express-session");
 // Middleware
@@ -24,9 +33,10 @@ const User = require("../models/user.js");
 //     });
 //   });
 // });
-// HOME PAGE
+// home page GET
 postRouter.get("/home", (req, res) => {
-  console.log(req.session.currentUser);
+  console.log(req.session.currentUser.posts);
+  
   Post.find({}, (error, allPosts) => {
     res.render("home.ejs", {
       posts: allPosts,
@@ -34,7 +44,7 @@ postRouter.get("/home", (req, res) => {
     });
   });
 });
-
+// GET for profile page
 postRouter.get("/profile", (req, res) => {
   console.log(req.session.currentUser);
 
@@ -54,7 +64,7 @@ postRouter.get("/home/seed", (req, res) => {
     res.redirect("/posts/home");
   });
 });
-// create
+// create new post GET
 
 postRouter.get("/newpost", (req, res) => {
   res.render("postnew.ejs", {
@@ -62,19 +72,23 @@ postRouter.get("/newpost", (req, res) => {
   });
 });
 
+// GET ROUTE edit caption  
 postRouter.get("/:id/edit", (req, res) => {
   Post.findById(req.params.id, (error, foundPost) => {
+    // is it possible to add another schema request 
     res.render("edit.ejs", {
       post: foundPost,
     });
   });
 });
 
+// POST ROUTE new post
 postRouter.post("/", (req, res) => {
   Post.create(req.body, (error, createdPost) => {
-    console.log(createdPost);
+    console.log("created post: " + createdPost);
     req.session.currentUser.posts.push(createdPost);
-    console.log(req.session.currentUser.posts);
+    console.log("user is  " + User.updatePost)
+    // console.log(req.session.currentUser.posts);
     res.redirect("/posts/home");
   });
 });
@@ -95,7 +109,7 @@ postRouter.post("/:id/like", (req, res) => {
     res.redirect(`/posts/home`);
   });
 });
-
+// DELETE ROUTE
 postRouter.delete("/:id", (req, res) => {
   Post.findByIdAndDelete(req.params.id, (error, deletedPosts) => {
     // res.send({ success: true });
@@ -103,6 +117,7 @@ postRouter.delete("/:id", (req, res) => {
   });
 });
 
+// PUT ROUTE edit captions
 postRouter.put("/:id", (req, res) => {
   Post.findByIdAndUpdate(
     req.params.id,
@@ -113,5 +128,10 @@ postRouter.put("/:id", (req, res) => {
     }
   );
 });
+
+// edit profile data
+// put route edit profile data
+
+
 
 module.exports = postRouter;

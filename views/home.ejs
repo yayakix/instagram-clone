@@ -24,17 +24,7 @@
     <div class="home-posts">
       <% if(user.username == posts[i].user){ %>
         <img src="<%=user.profileimage%>" id="userimage-home" alt="" />
-      <%}else{ %>
-        <img src="<%=posts[i].profileimage%>" id="userimage-home" alt="" />
-      <%}%>
-      <span
-        class="user-home"
-        id="username-home"
-      >
-        <%=posts[i].user%></span
-      >
-
-      <details>
+         <details>
         <summary><i class="fa-solid fa-ellipsis"></i></summary>
         <p><a href="/posts/<%=posts[i]._id%>/edit">Edit</a></p>
         <details>
@@ -48,6 +38,17 @@
           </form>
         </details>
       </details>
+      <%}else{ %>
+        <img src="<%=posts[i].profileimage%>" id="userimage-home" alt="" />
+      <%}%>
+      <span
+        class="user-home"
+        id="username-home"
+      >
+        <%=posts[i].user%></span
+      >
+        
+     
       <br />
       <img src="<%=posts[i].img%> " alt="" class="home-images" />
       <br />
