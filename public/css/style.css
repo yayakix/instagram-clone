@@ -373,4 +373,8 @@ display: none;
 #home-title{
   display: none;
 }
+
+.home-images{
+  max-width: 300px;
+}
 }
