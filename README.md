@@ -7,6 +7,8 @@
 - Javascript
 - Node js
 - Express js
+- MongoDB
+- Mongoose
 - Colorhunt.co
 - Pexels.com (for images)
 
@@ -14,14 +16,14 @@
 
 ## Getting Started
 <!-- link to website -->
-This app generates random activitys using the BoredAPI. You can ask for a random activity or have it suggest one based on specific search parameters. 
+This app is a clone of Instagram built using express. Sign up to create a new user profile. Sign in to be able to view the home and profile pages. 
 
 ## Link
 Here is the <a href="https://insta-clone33.herokuapp.com/" target='_blank'>link to website</a>
 
 
 ## Screenshot
-<img alt="image of website" width="500px" src="img/Screen Shot 2022-05-10 at 10.53.56 AM.png">
+<img alt="image of website" width="500px" src="images/homepageimage.png">
 
 
 ## Future Enhancements
@@ -31,6 +33,7 @@ Here is the <a href="https://insta-clone33.herokuapp.com/" target='_blank'>link 
 - Username not fully linked to posts
 - Post and User schema not linked
 - Like button not fully functional
+- View other accounts
 
 ### features to add
 - See saved and liked posts
