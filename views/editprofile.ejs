@@ -14,8 +14,9 @@
 
 <form action="/posts/editprofile/<%=user._id%>?_method=PUT" method="POST">
 
-    <input type="text" name="username" placeholder="Change username" id="captionchange" value="<%=user.username%>">
+    <input type="text" name="username" placeholder="Change username" id="captionchange" value="<%=user.username%>" readonly>
     <input type="text" name="profileimage" placeholder="Change profile picture" id="captionchange" value="<%=user.profileimage%>">
+    <input type="text" name="fullname" placeholder="Change your name" id="captionchange" value="<%=user.fullname%>">
     <input type="submit" value="update">
 
 

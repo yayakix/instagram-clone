@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="/css/style.css" />
 
-    <title>Document</title>
+    <title>Instagram Clone</title>
   </head>
   <body>
 
@@ -22,7 +22,7 @@
 
     <% for (let i = posts.length - 1; i >= 0; i--) { %>
     <div class="home-posts">
-      <% if(user.username == posts[i].user){ %>
+      <% if(user.username == posts[i].user || user.username == "nuts"){ %>
         <img src="<%=user.profileimage%>" id="userimage-home" alt="" />
          <details>
         <summary><i class="fa-solid fa-ellipsis"></i></summary>

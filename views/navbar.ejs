@@ -5,13 +5,15 @@
         id="home-title"
         alt=""
       />
-      <input
+    
+     
+  <input
         type="search"
         placeholder="Search"
         results="0"
         id="searchbar-home"
       />
-      <div class="rightside">
+           <div class="rightside">
         <a href="/posts/home"> <i class="fa-solid fa-house space"></i></a>
        
         <i class="fa-regular fa-paper-plane space"></i>
@@ -20,12 +22,15 @@
         </a>
 
         <i class="fa-regular fa-compass space"></i>
-        <i class="fa-regular fa-heart"></i>
-        <a href="/posts/profile"><i class="fa-solid fa-user"></i></a>
+        <i class="fa-regular fa-heart  "></i>
+        <a href="/posts/profile"><i class="fa-solid fa-user space"></i></a>
         <!-- change link to id  -->
- @<%=user.username%>
+        <span class="navbarusername"> @<%=user.username%></span>
+
       </div>
-      <form action="/sessions?_method=DELETE" method="POST" >
+    
+   
+      <!-- <form action="/sessions?_method=DELETE" method="POST" >
 			<input type="submit" value="Log Out" class="logout-btn" />
-		</form>
+		</form> -->
     </nav>

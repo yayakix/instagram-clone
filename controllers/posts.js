@@ -52,6 +52,7 @@ postRouter.get("/profile", (req, res) => {
     res.render("profile.ejs", {
       posts: allPosts,
       user: req.session.currentUser,
+      postnum: 0
     });
   });
 });

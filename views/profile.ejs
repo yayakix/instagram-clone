@@ -6,18 +6,27 @@
 <br>
 <br>
 <br>
+<form action="/sessions?_method=DELETE" method="POST" >
+			<input type="submit" value="Log Out" class="logout-btn"  id="logoutprofile"/>
+		</form>
+<div class="profile-header">
+    <img src="<%=user.profileimage%>" alt="image of profile" id="profileimage">
+<h1 id="username-greeting"> Hello! <b><%=user.username%> </b> </h1>
+<a id="editprofilebutton" href="/posts/<%=user._id%>/editprofile"><button>Edit profile</button></a>
+<!-- <p>You have <span id="length"></span> posts</p> -->
+<p id="fullnameprofile"><%=user.fullname%></p>
 
-<img src="<%=user.profileimage%>" alt="image of profile" id="profileimage">
-<h1> Hello! <b><%=user.username%> </b> </h1>
-<a href="/posts/<%=user._id%>/editprofile"><button>Edit profile</button></a>
-<p>You have <%=user.posts.length%> posts</p>
-<p><%=user.fullname%></p>
+
+</div>
+
 
 <hr class="profile-hr">
 <div class="cards">
     
  <% for (let i = posts.length - 1; i >= 0; i--) { %>
       <% if(user.username == posts[i].user){ %>
+     
+     
     <div class="cards__item">
         <a href=""><img src="<%=posts[i].img%>" alt="" id="profileimages"></a>
         <!--need to make this less long later on  -->
