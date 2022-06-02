@@ -1,0 +1,10 @@
+<%- include('navbar') -%>
+
+<form action="/posts/<%=post._id%>?_method=PUT" method="POST">
+
+    <input type="text" name="caption" placeholder="id" id="captionchange" value="<%=post.caption%>">
+
+    <input type="submit" value="update">
+
+
+</form>

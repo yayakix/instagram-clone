@@ -294,3 +294,7 @@ a {
 width: 300px;
 max-height: 300px;
 }
+#profileimage{
+  clip-path: circle();
+  max-width: 300px;
+}

@@ -14,26 +14,23 @@ app.use(
   })
 );
 
-
 const User = require("../models/user.js");
 
 
-postRouter.get("/", (req, res) => {
-  Post.find({}, (error, allPosts) => {
-    res.render("signup.ejs", {
-      post: allPosts,
-
-    });
-  });
-});
-
-
+// postRouter.get("/", (req, res) => {
+//   Post.find({}, (error, allPosts) => {
+//     res.render("signup.ejs", {
+//       post: allPosts,
+//     });
+//   });
+// });
+// HOME PAGE
 postRouter.get("/home", (req, res) => {
-console.log(req.session.currentUser)
+  console.log(req.session.currentUser);
   Post.find({}, (error, allPosts) => {
     res.render("home.ejs", {
       posts: allPosts,
-      user: req.session.currentUser
+      user: req.session.currentUser,
     });
   });
 });
@@ -73,11 +70,10 @@ postRouter.get("/:id/edit", (req, res) => {
   });
 });
 
-
 postRouter.post("/", (req, res) => {
   Post.create(req.body, (error, createdPost) => {
-    console.log(createdPost)
-    req.session.currentUser.posts.push(createdPost)
+    console.log(createdPost);
+    req.session.currentUser.posts.push(createdPost);
     console.log(req.session.currentUser.posts);
     res.redirect("/posts/home");
   });
@@ -86,16 +82,15 @@ postRouter.post("/", (req, res) => {
 let liked = false;
 postRouter.post("/:id/like", (req, res) => {
   Post.findById(req.params.id, (err, data) => {
-    if(liked === true){
- data.likes--
- liked = false
-    }else{
-        data.likes++;
-         liked = true;
+    if (liked === true) {
+      data.likes--;
+      liked = false;
+    } else {
+      data.likes++;
+      liked = true;
     }
-      
-      data.save();
-    
+
+    data.save();
 
     res.redirect(`/posts/home`);
   });
@@ -107,7 +102,6 @@ postRouter.delete("/:id", (req, res) => {
     res.redirect("/posts/home");
   });
 });
-
 
 postRouter.put("/:id", (req, res) => {
   Post.findByIdAndUpdate(

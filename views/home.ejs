@@ -22,7 +22,12 @@
 
     <% for (let i = posts.length - 1; i >= 0; i--) { %>
     <div class="home-posts">
-      <img src="<%=posts[i].userimage%>" id="userimage-home" alt="" /><span
+      <% if(user.username == posts[i].user){ %>
+        <img src="<%=user.profileimage%>" id="userimage-home" alt="" />
+      <%}else{ %>
+        <img src="<%=posts[i].profileimage%>" id="userimage-home" alt="" />
+      <%}%>
+      <span
         class="user-home"
         id="username-home"
       >

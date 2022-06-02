@@ -7,13 +7,13 @@
 <br>
 <br>
 
-<img src="" alt="image of profile">
-<h1> <%=user.username%> page</h1>
-<p><%=user.posts.length%> </p>
-<p><%=user.name%></p>
+<img src="<%=user.profileimage%>" alt="image of profile" id="profileimage">
+<h1> Hello! <b><%=user.username%> </b> </h1>
+<a href="/posts/<%=user._id%>editprofile"><button>Edit profile</button></a>
+<p>You have <%=user.posts.length%> posts</p>
+<p><%=user.fullname%> uhh</p>
 
 <h2>posts</h2>
-<p>grid of images</p>
 <div class="cards">
 <% for (let i = 0; i < user.posts.length; i++){%>
 

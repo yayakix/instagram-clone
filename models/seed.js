@@ -1,6 +1,6 @@
 module.exports = [
   {
-    userimage:
+    profileimage:
       "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     user: "Beans",
     caption: "A small pile of beans. Buy more beans for a big pile of beans.",
@@ -9,7 +9,7 @@ module.exports = [
     comments: ["hey", "love this!"],
   },
   {
-    userimage:
+    profileimage:
       "https://images.pexels.com/photos/8517921/pexels-photo-8517921.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     user: "bobber",
     caption: "A small pile of beans. Buy more beans for a big pile of beans.",
@@ -18,7 +18,7 @@ module.exports = [
     comments: ["hey", "d jeof!"],
   },
   {
-    userimage:
+    profileimage:
       "https://images.pexels.com/photos/10057616/pexels-photo-10057616.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     user: "Popper",
     caption: "A small pile of beans. Buy more beans for a big pile of beans.",
@@ -27,7 +27,7 @@ module.exports = [
     comments: ["yo yo", "love this!"],
   },
   {
-    userimage:
+    profileimage:
       "https://images.pexels.com/photos/9985755/pexels-photo-9985755.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     user: "user23",
     caption: "A small pile of beans. Buy more beans for a big pile of beans.",
@@ -36,7 +36,7 @@ module.exports = [
     comments: ["suppp"],
   },
   {
-    userimage:
+    profileimage:
       "https://images.pexels.com/photos/9977180/pexels-photo-9977180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     user: "user553",
     caption: "A small pile of beans. Buy more beans for a big pile of beans.",
@@ -45,7 +45,7 @@ module.exports = [
     comments: ["yo yo", "love this!"],
   },
   {
-    userimage:
+    profileimage:
       "https://images.pexels.com/photos/2564841/pexels-photo-2564841.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     user: "uSERer23",
     caption: "A small pile of beans. Buy more beans for a big pile of beans.",

@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
-  userimage: String,
+  profileimage: String,
   user: { type: String, required: true },
   caption: String,
   img: String,
-  likes: {type: Number, default: 0},
+  likes: { type: Number, default: 0 },
   comments: Array,
 });
 
