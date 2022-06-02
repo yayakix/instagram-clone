@@ -313,11 +313,12 @@ height: 250px;
 .profile-header{
   margin: 0 auto;
   display: grid;
-   grid-template-columns: 200px 100px;
-    grid-template-rows: 100px 50px 50px;
+   grid-template-columns: 200px 400px;
+    grid-template-rows: 100px 50px 50px 50px;
     grid-template-areas:
     "i h" 
     "i e"
+    "i n "
     "i b ";
   /* justify-content:end */
 }
@@ -343,9 +344,25 @@ height: 250px;
  
 }
 #fullnameprofile{
-  grid-area: b;
+  grid-area: n;
    margin-left: 50px;
 }
+#userbio{
+  grid-area: b;
+  margin-left: 50px;
+
+}
+
+#updateprofilebtn{
+  margin-left: 30px;
+  margin-top: 30px;
+  color: green;
+}
+#updateprofilebtn:hover{
+background-color: #5FD068;
+color: white;
+}
+
 
 @media only screen and (max-width: 800px) {
   .navbarusername{

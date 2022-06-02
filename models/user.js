@@ -8,6 +8,7 @@ const userSchema = Schema({
   password: { type: String, required: true },
   username: { type: String, unique: true },
   fullname: { type: String },
+  bio: { type: String, default: "Hey im new here" },
   // profileimage: { type: String },
   posts: { type: Array },
   followers: { type: Number, default: 0 },
