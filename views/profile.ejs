@@ -9,25 +9,23 @@
 
 <img src="<%=user.profileimage%>" alt="image of profile" id="profileimage">
 <h1> Hello! <b><%=user.username%> </b> </h1>
-<a href="/posts/<%=user._id%>editprofile"><button>Edit profile</button></a>
+<a href="/posts/<%=user._id%>/editprofile"><button>Edit profile</button></a>
 <p>You have <%=user.posts.length%> posts</p>
 <p><%=user.fullname%></p>
 
-<hr>
-<h2>posts</h2>
+<hr class="profile-hr">
 <div class="cards">
     
-<% for (let i = 0; i < user.posts.length; i++){%>
-
-
+ <% for (let i = posts.length - 1; i >= 0; i--) { %>
+      <% if(user.username == posts[i].user){ %>
     <div class="cards__item">
-        <img src="<%=user.posts[i].img%>" alt="" id="profileimages">
+        <a href=""><img src="<%=posts[i].img%>" alt="" id="profileimages"></a>
+        <!--need to make this less long later on  -->
 
-
-      
     </div>
 
     
+<%}%>
 <%}%>
 </div>
 

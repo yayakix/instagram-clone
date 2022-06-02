@@ -1,10 +1,24 @@
+<%- include('header') -%>
 <%- include('navbar') -%>
+<br>
+<br>
+<br>
+<br>
 
-<form action="/posts/<%=post._id%>?_method=PUT" method="POST">
+<br>
+<br>
 
-    <input type="text" name="caption" placeholder="id" id="captionchange" value="<%=post.caption%>">
+<br>
+<br>
 
+
+<form action="/posts/editprofile/<%=user._id%>?_method=PUT" method="POST">
+
+    <input type="text" name="username" placeholder="Change username" id="captionchange" value="<%=user.username%>">
+    <input type="text" name="profileimage" placeholder="Change profile picture" id="captionchange" value="<%=user.profileimage%>">
     <input type="submit" value="update">
 
 
 </form>
+
+<%- include('footer') -%>

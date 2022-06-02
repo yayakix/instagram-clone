@@ -130,7 +130,27 @@ postRouter.put("/:id", (req, res) => {
 });
 
 // edit profile data
+postRouter.get("/:id/editprofile", (req, res) => {
+    User.findById(req.params.id, (error, foundUser) => {
+      // is it possible to add another schema request
+      res.render("editprofile.ejs", {
+        user: foundUser,
+        // users: req.session.currentUser,
+      });
+    });
+
+});
 // put route edit profile data
+postRouter.put("/editprofile/:id", (req, res) => {
+  User.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (error, updatePost) => {
+      res.redirect("/sessions/new");
+    }
+  );
+});
 
 
 
