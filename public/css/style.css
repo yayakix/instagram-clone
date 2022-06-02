@@ -290,8 +290,8 @@ a {
 }
 
 .cards__item {
-  /* There will be 4 cards per row */
-  flex-basis: 25%;
+  /* There will be 5 cards per row */
+  flex-basis: 20%;
 
   padding-left: 8px;
   padding-right: 8px;
@@ -299,7 +299,7 @@ a {
 }
 #profileimages{
 width: 300px;
-max-height: 300px;
+height: 300px;
 }
 
 .profile-hr{
@@ -320,39 +320,34 @@ max-height: 300px;
 }
 #profileimage{
   clip-path: circle();
-  max-width: 200px;
+  width: 200px;
+  height: 200px;
   /* margin-left: 0px; */
   grid-area: i;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 #username-greeting{
   /* margin-left: -100px; */
   grid-area: h;
+  margin-left: 50px;
   
 }
 #editprofilebutton{
   grid-area: e;
+   margin-left: 50px;
  
 }
 #fullnameprofile{
   grid-area: b;
+   margin-left: 50px;
 }
 
 @media only screen and (max-width: 800px) {
   .navbarusername{
 display: none;
   }
-  /* .fa-paper-plane{
-    display: none;
-  }
-  .fa-heart {
-     display: none;
-  }
-  .fa-compass{
-     display: none;
-  }
-  .space{
-    padding: 5px;
-  } */
+
 }
 
 #logoutprofile{

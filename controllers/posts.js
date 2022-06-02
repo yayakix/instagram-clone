@@ -153,6 +153,16 @@ postRouter.put("/editprofile/:id", (req, res) => {
   );
 });
 
+// add route to see individual images on profile
+postRouter.get("/showpost/:id", (req, res) => {
+  Post.findById(req.params.id, (error, foundPost) => {
+    // is it possible to add another schema request 
+    res.render("showpost.ejs", {
+      post: foundPost,
+      user: req.session.currentUser,
+    });
+  });
+});
 
 
 module.exports = postRouter;
