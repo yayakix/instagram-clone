@@ -57,13 +57,13 @@ postRouter.get("/profile", isAuthenticated, (req, res) => {
 });
 
 // seed data
-postRouter.get("/home/seed", (req, res) => {
-  Post.deleteMany({}, (error, allPosts) => {});
+// postRouter.get("/home/seed", (req, res) => {
+//   Post.deleteMany({}, (error, allPosts) => {});
 
-  Post.create(postSeed, (error, data) => {
-    res.redirect("/posts/home");
-  });
-});
+//   Post.create(postSeed, (error, data) => {
+//     res.redirect("/posts/home");
+//   });
+// });
 // create new post GET
 
 postRouter.get("/newpost", isAuthenticated, (req, res) => {
